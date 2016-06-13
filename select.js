@@ -49,7 +49,7 @@
 	var _callbacks = [];
 	var _ready = false;
 	
-	window.$l = function (arg) {
+	window.$elect = function (arg) {
 	  if (typeof arg === 'string') {
 	    var nodeList = document.querySelectorAll(arg);
 	    var nodeListArray = [].slice.call(nodeList);
@@ -69,7 +69,7 @@
 	  }
 	};
 	
-	$l.extend = function() {
+	$elect.extend = function() {
 	  var result = {};
 	  for (var i = 0; i < arguments.length; i++) {
 	    result = Object.assign(result, arguments[i]);
@@ -77,7 +77,7 @@
 	  return result;
 	};
 	
-	$l.ajax = function(optionsObject) {
+	$elect.ajax = function(optionsObject) {
 	  var request = new XMLHttpRequest();
 	  var defaults = {
 	  contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -87,7 +87,7 @@
 	  error: function () {},
 	  data: {},
 	};
-	  options = $l.extend(defaults, options);
+	  options = $elect.extend(defaults, options);
 	
 	  if (options.method.toUpperCase() === "GET") {
 	    options.url += "?" + toQueryString(options.data);
