@@ -2,7 +2,7 @@ module.exports = {
   entry: "./lib/main.js",
   output: {
     path: __dirname,
-    filename: "$elect.js"
+    filename: "select.js"
 	},
 	devtool: "source-map"
 };

@@ -227,4 +227,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=$elect.js.map
+//# sourceMappingURL=select.js.map
